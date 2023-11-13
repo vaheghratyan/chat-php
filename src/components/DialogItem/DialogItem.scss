@@ -1,0 +1,89 @@
+.dialogs {
+  &__item {
+    $item: &;
+    display: flex;
+    margin-bottom: 20px;
+
+    &-avatar {
+      flex: 0 0 40px;
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+    }
+
+    &--online {
+      &-avatar {
+        &::before {
+          display: block;
+          position: absolute;
+          bottom: -2px;
+          right: 0;
+          content: "";
+          background-color: #00c980;
+          border-radius: 30px;
+          width: 13px;
+          height: 13px;
+          border: 3px soild #fff;
+        }
+      }
+    }
+
+    &-info {
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+
+      &-top {
+        display: flex;
+
+        b {
+          font-weight: 500;
+          font-size: 14px;
+          flex: 1;
+        }
+      }
+
+      &-bottom {
+        position: relative;
+
+        p {
+          opacity: 0.5;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          width: 220px;
+          white-space: nowrap;
+        }
+
+        &-count {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          color: #fff;
+          background: #f46b6b;
+          font-weight: 500;
+          width: 100%;
+          min-width: 18px;
+          max-width: 22px;
+          height: 18px;
+          border-radius: 30px;
+          font-size: 11px;
+          text-align: center;
+          line-height: 17px;
+          box-shadow: 0 0 0px 3px #fff;
+        }
+
+        .message__icon-readed {
+          bottom: 0;
+          left: auto;
+          right: 0;
+        }
+      }
+    }
+  }
+}

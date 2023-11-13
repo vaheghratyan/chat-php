@@ -1,0 +1,20 @@
+@import "~antd/dist/antd.css";
+
+@import "./layouts/_chat.scss";
+
+body {
+  background-color: #f4f7fd;
+}
+
+body,
+html,
+#root,
+.wrapper {
+  height: 100%;
+  color: #202002;
+  font-size: 14px;
+}
+
+* {
+  outline: none;
+}
